@@ -1,0 +1,57 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div >
+    <label class="display-6">Hola @Model.FullName!</label>
+</div>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="500">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item tint-75 active consumption ">
+            <div class="container text-center w-75 h-100 align-middle">
+                <div class="display-3" style="margin: 50px;">@Model.UsageGB GB</div>
+                <div class="display-5">
+                    Datos
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item consumption analog-1">
+            <div class="container text-center w-75 h-100 align-middle">
+                <div class="display-3" style="margin: 50px;">@Model.UsageMinutes</div>
+                <div class="display-5">
+                    Minutos
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item consumption analog-2">
+            <div class="container text-center w-75 h-100 align-middle">
+                <div class="display-3" style="margin: 50px;">@Model.UsageSMS</div>
+                <div class="display-5">
+                    SMS
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
