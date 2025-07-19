@@ -27,9 +27,9 @@ public class IndexModel : PageModel
         };
 
         int customerId = id ?? 101; // Default to 101 if no ID is provided
-        string baseUrl = Environment.GetEnvironmentVariable("ACCOUNTS_API") ?? "http://localhost:5006/";
+        string baseUrl = Environment.GetEnvironmentVariable("ACCOUNTS_API") ?? "http://localhost:5006";
         _logger.LogInformation("Base URL for API: {BaseUrl}", baseUrl);
-        string apiUrl = $"{baseUrl}api/v2/customer/{customerId}";
+        string apiUrl = $"{baseUrl}/api/v2/customer/{customerId}";
         using var httpClient = new HttpClient();
         var response = await httpClient.GetAsync(apiUrl);
         if (response.IsSuccessStatusCode)
