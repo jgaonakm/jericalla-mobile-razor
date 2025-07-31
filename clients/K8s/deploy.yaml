@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: clients-razor
-        image: jgaonaakm/jericalla-mobile-razor-clients:1.0.0
+        image: jgaonaakm/jericalla-mobile-razor-clients:1.0.1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -24,4 +24,6 @@ spec:
         env:
           - name: ACCOUNTS_API
             value: "http://accounts-api"
+          - name: SUPPORT_API
+            value: "http://support-api"
   

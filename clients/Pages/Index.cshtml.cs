@@ -12,6 +12,7 @@ public class IndexModel : PageModel
     public int UsageSMS { get; set; }
 
     public string FullName { get; set; } = "{Nombre}";
+    public string Phone { get; set; } = "{Teléfono}";
     private readonly ILogger<IndexModel> _logger;
 
     public IndexModel(ILogger<IndexModel> logger)
@@ -44,6 +45,7 @@ public class IndexModel : PageModel
             {
                 _logger.LogInformation("Parsed customer data: {0}", customer.FullName);
                 FullName = customer.FullName;
+                Phone = customer.PhoneNumber;
             }
         }
 
